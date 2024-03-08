@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/chalk');
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -5,7 +7,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #ff1717;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -28,6 +30,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-family: 'Chalk', sans-serif;
 }
 
 h1 {
@@ -56,13 +59,23 @@ button:focus-visible {
 
 @media (prefers-color-scheme: light) {
   :root {
-    color: #213547;
-    background-color: #ffffff;
+    color:white;
+    background-image: url("https://t4.ftcdn.net/jpg/04/31/44/89/360_F_431448941_oo9a7gWADWwWjyYBDmdcYvuIZdss3sxh.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   a:hover {
     color: #747bff;
   }
+  
   button {
-    background-color: #f9f9f9;
+    border-radius: 8px;
+    border: 1px solid grey;
+    font-size: 1em;
+    font-weight: 600;
+    background-color:white;
+    cursor: pointer;
+    color:black;
+    transition: border-color 0.25s;
   }
 }
