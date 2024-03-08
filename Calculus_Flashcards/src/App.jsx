@@ -8,7 +8,7 @@ function App() {
 
   const flashcards = [
     {
-      question:"Who is this man? ",
+      question:"Who is this man?",
       image: "https://yt3.googleusercontent.com/AfqNfJy_kaReKMIHuB4-20TMgmCx9o8Zbn2_A_wJAul14H82Gy7q63oaC6KiEcootgepScJX8Yc=s900-c-k-c0x00ffffff-no-rj",
       answer: "THE GOAT - BLACKPENREDPEN",
       color: "lightyellow",
