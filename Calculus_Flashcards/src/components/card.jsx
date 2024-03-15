@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './card.css';
 
 const Card = ({ question, answer, flipped, setFlipped, color, image}) => {
-  console.log(color);
   const [isFlipped, setIsFlipped] = useState(flipped);
 
   useEffect(() => {

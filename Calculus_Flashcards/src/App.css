@@ -1,3 +1,4 @@
+@import url('https://fonts.cdnfonts.com/css/chalk');
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -19,6 +20,18 @@
 
 .centerbutton button {
   flex: 0;
-  margin: 0 5px; /* Adjust margin as needed */
+  margin: 0 5px; 
   margin-top: 5px;
+}
+
+.stylesubmit {
+  border-radius: 8px;
+  border: 1px solid grey;
+  font-size: 1em;
+  font-weight: 600;
+  background-color:white;
+  cursor: pointer;
+  color:black;
+  transition: border-color 0.25s;
+  font-family: 'Chalk', sans-serif;
 }

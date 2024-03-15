@@ -4,6 +4,7 @@ import Card from './components/card';
 
 function App() {
   const [count, setCount] = useState(0);
+  const [streak, setStreak] = useState(0);
   const [flipped, setFlipped] = useState(false); 
 
   const flashcards = [
@@ -269,19 +270,44 @@ function App() {
   const handleNext = () => {
     setFlipped(false); 
     setCount(count + 1 >= flashcards.length ? 0 : count + 1);
+    document.getElementById("guess").value = "";
+    document.getElementById("guess").style.background = 'revert';
   };
 
   const handlePrev = () => {
     setFlipped(false); 
     setCount(count - 1 < 0 ? flashcards.length - 1 : count - 1);
+    document.getElementById("guess").value = "";
+    document.getElementById("guess").style.background = 'revert';
   };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (flipped === false) {
+        const userAnswer = document.getElementById("guess").value
+        const correctAnswer = flashcards[count].answer;
+        if (userAnswer === correctAnswer) {
+            document.getElementById("guess").style.background = 'lightgreen';
+            setStreak(streak+1);
+        }
+        else {
+            document.getElementById("guess").style.background = 'pink';
+            setStreak(0);
+        }
+    }
+    else {
+        document.getElementById("guess").value = "Flipped! Guessing Disabled!";
+        document.getElementById("guess").style.background = 'red';
+    }
+  }
 
   return (
     <>
       <div>
         <h1>Trigonometry Essentials For Calculus!</h1>
         <p>How strong are your trigonometry fundamentals? Test or practice your knowledge here!</p>
-        <h4>Cards Reviewed: {count + 1}</h4>
+        <h4>Cards Reviewed: {count}</h4>
+        <h4>Guess Streak: {streak}</h4>
       </div>
 
       <div className="centercard">
@@ -293,6 +319,14 @@ function App() {
           flipped={flipped}
           setFlipped={setFlipped}
         />
+      </div>
+
+      <div>
+        <form onSubmit={handleSubmit}>
+            <label for="guess">Guess Answer: </label>
+            <input type="text" id="guess"></input>
+            <input type="submit" className="stylesubmit"></input>
+        </form>
       </div>
 
       <div className="centerbutton">
