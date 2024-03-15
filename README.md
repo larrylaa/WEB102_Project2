@@ -4,7 +4,7 @@ Submitted by: **Larry La**
 
 This web app: **Flashcards to remember trig derivatives, integrals, and fundamental identities, adding stuff for part 3.**
 
-Time spent: **X** hours spent in total
+Time spent: **1** hours spent in total
 
 ## Required Features
 
